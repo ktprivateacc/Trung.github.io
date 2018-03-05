@@ -1,0 +1,32 @@
+@keyframes creat {
+	0%  {background-color: #EF7126; color: #F9E559;}
+    25%  {background-color: #6F3662; color: #FFFFFF;}
+    50%  {background-color: #9F6164; color: #F8DEBD;}
+    75%  {background-color: #44B3C2; color: #FFFFFF;}
+    100% {background-color: #218C8D; color: #F9E559;}
+}
+#all {
+	max-width: 1000px;
+	margin: auto;
+}
+.picture {
+	float: left;
+	padding: 1.6%;
+}
+#top {
+	text-align: center;
+	animation: creat 10s ease infinite;
+}
+@keyframes abc {
+	from {right: 0px;}
+	to {right: 200px;}
+}
+#khung {
+	position: relative;
+}
+p {
+	position: absolute;
+	right: 0px;
+	top: 450px;
+	animation: abc 5s linear infinite;
+}
