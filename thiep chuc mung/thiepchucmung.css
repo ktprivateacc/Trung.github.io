@@ -25,7 +25,7 @@ background-image: url(https://cdn.codemyui.com/wp-content/uploads/2016/11/Pure-C
 
 
 span {
-	animation: tiktok 5s cubic-bezier(0.21, 0.18, 0.59, 0.57) infinite
+	animation: tiktok 5s cubic-bezier(0.21, 0.18, 0.59, 0.57) infinite;
 	font-family: cursive;
 	font-size: 50px;
 	font-style: italic;
