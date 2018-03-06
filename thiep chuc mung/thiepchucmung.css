@@ -17,13 +17,15 @@ background-image: url(https://cdn.codemyui.com/wp-content/uploads/2016/11/Pure-C
 	left: 600px;
 }
 @keyframes tiktok {
-	0% { color: #2ebfce94;} 
-	25% { color: #bb3586;}
-	75% { color: #59af23;} 
+	0% { color: #2ebfce94; text-shadow: 6px 6px 2px #000;} 
+	25% { color: #bb3586; text-shadow: 4px 4px 2px #000;}
+	75% { color: #59af23; text-shadow: 2px 2px 2px #000;}
+	100% {color: #59af23; text-shadow: 0px 0px 2px #000;} 
 }
 
+
 span {
-	animation: tiktok 10s ease infinite;
+	animation: tiktok 5s ease infinite;
 	font-family: cursive;
 	font-size: 50px;
 	font-style: italic;
