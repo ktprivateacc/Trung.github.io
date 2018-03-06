@@ -1,0 +1,33 @@
+body { background-color:#333;
+background-image: url(https://cdn.codemyui.com/wp-content/uploads/2016/11/Pure-CSS-Snow-Animation.gif);}
+#top {
+	max-width: 500px;
+	margin: auto;
+	padding-top: 5%;
+}
+#text1 {
+	position: absolute;
+	top: 300px;
+	left: 480px;
+}
+
+#text2 {
+	position: absolute;
+	top: 360px;
+	left: 600px;
+}
+@keyframes tiktok {
+	0% { color: #2ebfce94;} 
+	25% { color: #bb3586;}
+	75% { color: #59af23;} 
+}
+
+span {
+	animation: tiktok 10s ease infinite;
+	font-family: cursive;
+	font-size: 50px;
+	font-style: italic;
+	font-weight: 500;
+}
+
+
