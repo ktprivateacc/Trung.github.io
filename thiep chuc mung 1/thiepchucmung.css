@@ -1,21 +1,25 @@
-body { background-color:#333;
-background-image: url(https://cdn.codemyui.com/wp-content/uploads/2016/11/Pure-CSS-Snow-Animation.gif);}
-#top {
-	max-width: 500px;
-	margin: auto;
-	padding-top: 5%;
-}
-#text1 {
-	position: absolute;
-	top: 300px;
-	left: 480px;
+* {
+	box-sizing: border-box;
+
 }
 
-#text2 {
-	position: absolute;
-	top: 360px;
-	left: 600px;
+body { background-image: url(https://cdn.codemyui.com/wp-content/uploads/2016/11/Pure-CSS-Snow-Animation.gif);}
+
+img {
+	max-width: 100%;
 }
+#menu {
+	margin: auto;
+	padding-top: 5%;
+	position: relative;
+	max-width: 500px;
+}
+#khung {
+	position: absolute;
+	top: 49%;
+	right: 29%;
+}
+
 @keyframes tiktok {
 	0% { color: #2ebfce94; text-shadow: 6px 6px 2px #000;} 
 	25% { color: #bb3586; text-shadow: 4px 4px 2px #000;}
@@ -23,13 +27,12 @@ background-image: url(https://cdn.codemyui.com/wp-content/uploads/2016/11/Pure-C
 	100% {color: #59af23; text-shadow: 0px 0px 2px #000;} 
 }
 
-
 span {
 	animation: tiktok 5s cubic-bezier(0.21, 0.18, 0.59, 0.57) infinite;
 	font-family: cursive;
-	font-size: 50px;
 	font-style: italic;
 	font-weight: 500;
+	font-size: 40px;
 }
 
 
