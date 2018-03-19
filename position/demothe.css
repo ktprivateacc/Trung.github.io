@@ -1,0 +1,74 @@
+* {
+	box-sizing: border-box;
+}
+
+#tatca {
+	max-width: 1000px;
+	margin: auto;
+}
+
+.anh {
+	max-width: 100%
+}
+#banner {
+	max-width: 100%;
+}
+
+.all {
+	max-width: 50%;
+	float: right;
+	padding: 1%;
+}
+.khung {
+	float: left;
+}
+
+#khung1 {
+	max-width: 30%;
+	position: relative;
+}
+#khung2 {
+	max-width: 70%;
+}
+.noidung {
+	max-width: 300px;
+	min-height: 72px;
+	opacity: 1;
+}
+.anh:hover {
+	border-radius: 50%;
+}
+#abc {
+	max-width: 100%;
+	display: inline;
+	padding: 1px;
+}
+#abc > img {
+	max-width: 100%;
+	background-color: white;
+	border-radius: 50%;
+	position: absolute;
+	top: -190px;
+	left: 20px;
+}
+#back {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	font-weight: bolder;
+	border: 5px solid red;
+}
+.tieude {
+	max-width: 300px;
+	min-height: 36px;
+}
+#logo {
+	max-width: 100%;
+}
+#menu {
+	position: absolute;
+	bottom: -560px;
+	left: 0px;
+}
+
+
