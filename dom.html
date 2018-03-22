@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo DOM</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<h1>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h1>
+	<div id="all" >
+		<p id="write1" class="box">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus turpis nec cursus interdum. Phasellus tincidunt nulla nec odio finibus, at condimentum dui maximus. Sed laoreet orci augue, id rhoncus odio ullamcorper vitae. Nam interdum tellus sed orci maximus dignissim. Integer quis nisi a nunc malesuada tristique. Morbi malesuada auctor felis, et suscipit dolor finibus nec. Cras varius dapibus libero nec faucibus. Praesent euismod nibh ante, non faucibus lectus mattis vitae. Maecenas pellentesque ante eu lorem rhoncus tincidunt. Sed in semper eros. Pellentesque at finibus augue.
+		</p>
+
+		<p id="write2" class="box">
+			Quisque sed pretium erat, a accumsan urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed facilisis tristique augue sit amet placerat. Maecenas sit amet lorem neque. Curabitur consectetur consequat augue eget feugiat. Proin tempus finibus tortor eleifend faucibus. Cras consectetur fermentum feugiat. Donec eget tincidunt urna, at interdum lorem. In in aliquet leo. Suspendisse in sagittis est. Etiam tempus enim in felis maximus commodo. Mauris lobortis ligula eu sagittis blandit.
+		</p>
+
+		<p id="write3" class="box">
+			In varius, sem sit amet volutpat semper, risus odio eleifend enim, et suscipit eros mauris a eros. Sed id blandit ligula, non volutpat eros. Phasellus id sem tellus. Donec egestas eu orci non tempor. Praesent blandit hendrerit convallis. Nam placerat tellus non nibh imperdiet venenatis. Nunc vel consectetur risus, eget ullamcorper justo.
+		</p>
+	</div>
+	<script>
+		//1
+		function changeFontSize(x) {
+			var p1 = document.getElementsByClassName("box");
+			for (var i = 0; i < p1.length; i++) {
+				p1[i].style.fontSize = x + "px";
+			}
+		}
+
+		//2
+		function increaseFontSize(y) {
+			var num1 = document.getElementById(y).style.fontSize;
+			if (parseInt(num1) <= 29) {
+			num1= (parseInt(num1) + 1) + "px";
+		} else {return;}
+			document.getElementById(y).style.fontSize = num1;
+			return num1;
+		}
+
+		//3
+		function decreaseFontSize(z) {
+			var num2 = document.getElementById(z).style.fontSize;
+			if (parseInt(num2) > 10) {
+			num2= (parseInt(num2) - 1) + "px";
+		} else {return;}
+			document.getElementById(z).style.fontSize = num2;
+			return num2;
+		}
+
+		//4
+		function changeColor() {
+			document.getElementById("write1").style.color="blue";
+			document.getElementById("write2").style.color="yellow";
+			document.getElementById("write3").style.color="red";
+		}
+		
+		//5
+		function changeBgColor(t) {	
+			document.body.style.backgroundColor = (t);
+		}
+
+		//6
+		function copyContent() {
+			var pg1 = document.getElementById("write1").innerText;
+			var pg2 = document.getElementById("write2").innerText;
+			pg2 = pg1;
+			document.getElementById("write2").innerText = pg2;
+			
+		}
+	</script>
+</body>
+</html>
