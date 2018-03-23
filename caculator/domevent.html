@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dom event</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="domevent.css">
+</head>
+<body>
+	<h1>Caculator made by Trung</h1>
+
+	<div id="box">
+		
+		<input type="text" id="result" readonly>
+		
+		<div id="box2">
+
+			<button onclick="num2(this)" value ="+" class="no1">+</button>
+			<button onclick="num2(this)" value ="-" class="no1 line1">-</button>
+			<button onclick="num2(this)" value ="*" class="no1 line1">x</button>
+			<button onclick="num2(this)" value ="/" class="no1 line1">÷</button> </br>
+			<button onclick="num1(this)" value ="1" id="so1" class="no1">1</button>
+			<button onclick="num1(this)" value ="2" class="no1 line1">2</button>
+			<button onclick="num1(this)" value ="3" class="no1 line1">3</button>
+			<button onclick="num5(this)" class="no1 line1">%</button> 
+			<button onclick="num1(this)" value ="4" class="no1">4</button>
+			<button onclick="num1(this)" value ="5" class="no1 line1">5</button>
+			<button onclick="num1(this)" value ="6" class="no1 line1">6</button>
+			<button onclick="num3(this)" class="no1 line1">&Sqrt;</button> 
+			<button onclick="num1(this)" value ="7" class="no1">7</button>
+			<button onclick="num1(this)" value ="8" class="no1 line1">8</button>
+			<button onclick="num1(this)" value ="9" class="no1 line1">9</button>
+			<button onclick="num4(this)" class="no1 line1">=</button> 
+			<button onclick="num0(this)" value ="0" class="no1">0</button>
+			<button onclick="num2(this)" value ="." class="no1 line1">.</button>
+			<button onclick="num6(this)" id="nothing" class="no1 line1">CLEAR</button>
+
+		</div>
+
+	</div>
+
+	<script>
+
+		var y = result.value;
+		
+		function num1(button) {
+			var x = button.value;
+			y = y + x;
+			document.getElementById("result").value = y;
+			} 
+
+		function num2(button) {
+			if (y == "") {return;}
+			else {
+				var z = button.innerHTML;
+				y = y + z;
+				document.getElementById("result").value = y;
+				return;
+			}
+		}
+
+		function num0(button) {
+			if (y == "0") {return;}
+			else {
+				var z = button.value;
+				y = y + z;
+				document.getElementById("result").value = y;
+				return;
+			}
+		}
+
+		function num3(button) {
+			var t = Math.sqrt(y);
+			y = eval(t);
+			document.getElementById("result").value = y;
+		}
+
+		function num4(button) {
+			var newy1 = y.replace("x", "*");
+			document.getElementById("result").value = newy1;
+			var newy2 = newy1.replace("÷", "/");
+			document.getElementById("result").value = newy2;
+			y = eval(newy2);
+			document.getElementById("result").value = y;
+			y = "";
+			result.value == "";
+		}	
+		
+		function num5(button) {
+			y = (y * 100) + "%";
+			document.getElementById("result").value = y;
+		}
+
+		function num6(button) {
+			y = "";
+			document.getElementById("result").value = y;
+		}
+
+			
+	</script>
+</body>
+</html>
