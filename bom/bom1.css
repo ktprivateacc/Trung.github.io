@@ -46,7 +46,6 @@ button {
 #ketqua {
 	position: absolute;
 	top: 0px;
-	border: 1px solid red;
 }
 
 #boxF {
@@ -75,7 +74,15 @@ button {
 	display: none;
 }
 
+#qua {
+	width: 900px;
+	margin: auto;
+	padding-top: 70px;
+}
 
+#qua1 {
+	box-shadow: -5px 5px 10px;
+}
 
 
 
