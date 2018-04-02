@@ -1,6 +1,6 @@
 var a = null;
 var count = 0;
-var remainingTime = 3000;
+var remainingTime = 6000;
 $("#prog").attr('max',remainingTime);
 $("#prog").attr('value',remainingTime);
 
