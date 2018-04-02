@@ -1,0 +1,25 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(Image/troll.gif);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#box1 {
+	position: absolute;
+	top: 30%;
+	right: 20%;
+}
+
+#box2 {
+	width: 400px;
+	height: 100px;
+	font-size: 30px;
+	border-radius: 50px;
+	box-shadow: 5px 5px 10px #0095ff;
+}
