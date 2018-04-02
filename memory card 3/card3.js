@@ -1,6 +1,6 @@
 var a = null;
 var count = 0;
-var remainingTime = 30000;
+var remainingTime = 3000;
 $("#prog").attr('max',remainingTime);
 $("#prog").attr('value',remainingTime);
 
@@ -15,7 +15,7 @@ function num(button) {
 			clearInterval(run);
 			window.location.href = "replay.html";
 		}
-	}, 1);
+	}, 10);
 }
 
 var obj1 = {
