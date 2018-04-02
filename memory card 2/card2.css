@@ -1,0 +1,62 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(Image/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#main {
+	width: 1000px;
+	margin: auto;	
+	margin-top: 50px;
+}
+.clgt {
+	width: 20%; 
+	height: 300px;
+	padding: 10px;
+	float: left;
+}
+s
+.box {
+	position: relative;
+	width: 100%;
+	float: left;
+	height: 240px;
+}
+	
+.box:hover {
+	box-shadow: 3px 3px 5px purple;
+
+}
+
+.front, .back {
+	width: 100%;
+	backface-visibility: hidden;
+	transition: all 0.5s;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+}
+
+.intro1 {
+	transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
