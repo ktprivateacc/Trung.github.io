@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registor Form</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="registorform.css">
+</head>
+<body>
+	<div id="wrap">
+		<h1>Đăng Kí</h1>
+
+		<form action="result.html">
+
+			<input class="box2 all" type="text" name="id" placeholder="ID"></br>
+
+			<input class="box2 all" type="password" name="password" placeholder="Mật Khẩu"></br>
+
+			<input class="box2 all" type="text" name="name" placeholder="Họ Tên"></br>
+
+			<select id="date" class="box1 all" name="date">
+				<option>Ngày</option>
+			</select>
+
+			<select id="month" class="box1 all" name="month">
+				<option>Tháng</option>
+			</select>
+
+			<select id="year" class="box1 all" name="year">
+				<option>Năm Sinh</option>
+			</select>
+
+			<select id="gender" id="sex" class="box1 all" name="gender">
+				<option>Giới Tính</option>
+				<option value="Nam">Nam</option>
+				<option value="Nữ">Nữ</option>
+				<option value="Khác">Khác</option>
+			</select>
+			</br>
+
+			<input class="box2 all" type="text" name="address" placeholder="Address"></br>
+
+			<input class="box2 all" type="text" name="phone" placeholder="Phone"></br>
+
+			<input class="box2 all" type="text" name="email" placeholder="Email"></br>
+
+			
+			
+			<input id="login" type="submit" class="test" value="Đăng Nhập"></br>
+			
+		</form>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<script src="registorform.js"></script>
+</body>
+</html>

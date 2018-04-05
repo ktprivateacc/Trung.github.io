@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+#wrap {
+	width: 400px;
+	height: 500px;	
+	margin: auto;
+	margin-top: 50px;
+	border: 1px solid red;
+	text-align: center;
+	background-color: red;
+}
+
+#login {
+	-webkit-appearance: none;
+	width: 150px;
+	height: 30px;
+	margin-top: 50px;
+	font-size: 20px;
+}
+
+.box1 {
+	-webkit-appearance: none;
+	border-radius: 0px;
+
+}
+
+.box2 {
+	width: 300px;
+}
+
+.all {
+	margin-top: 10px;
+	height: 40px;
+	font-size: 15px;
+}
+
+select {
+	width: 72px;
+}
+
+
+#date {
+	margin-left: 4px;
+}
