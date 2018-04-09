@@ -5,21 +5,41 @@
 	<meta charset="utf-8"/>
 </head>
 <body>
-	<p>Đăng Kí Thành Công</p>
-	<p>Thông Tin Về Tài Khoản Của Bạn Như Sau</p>
+<h1>Đăng Kí Thành Công</h1>
+	<h2>Thông Tin Tài Khoản Của Bạn Như Sau:</h2>
 	<p id="main"></p>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script>
-		function decode() {
-			var uri = window.location.href;
-			var uri_dec = decodeURIComponent(uri);
-			$("#main").html(uri_dec);
-		}
-		decode();
+		var getUrlParameter = function getUrlParameter(sParam) {
+    	var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+   		 for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+   	}
+};
+
+	document.write('<p>'+ "Id:" + " " + getUrlParameter('id') + '</p>');
+	document.write('<p>'+ "Password:" + " " + getUrlParameter('password') + '</p>');
+	document.write('<p>'+ "Họ Tên:" + " " + getUrlParameter('name') + '</p>');
+	document.write('<p>'+ "Địa Chỉ:" + " " + getUrlParameter('address') + '</p>');
+	document.write('<p>'+ "SĐT:" + " " + getUrlParameter('phone') + '</p>');
+	document.write('<p>'+ "Email:" + " " + getUrlParameter('email') + '</p>');
+	document.write('<p>'+ "Facebook:" + " " + getUrlParameter('facebook') + '</p>');
+	document.write('<p>'+ "Ngày Sinh:" + " " + getUrlParameter('date') + "/" + getUrlParameter('month') + "/" + getUrlParameter('year') + '</p>');
+	document.write('<p>'+ "Giới Tính:" + " " + getUrlParameter('gender') + '</p>');
+	
+	
+	
 
 	</script>
-
 </body>
 </html>

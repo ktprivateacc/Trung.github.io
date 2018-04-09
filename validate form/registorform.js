@@ -13,71 +13,88 @@ for (var i = 1900; i <= 2018 ; i++) {
 	$("#year").append(year);
 }
 
-var a = true;
 $("#registorform").on('submit', function () {
-	if ($("#id").val().trim()=="") {
-		$("#id").next('span').text('ID không được để trống');
-		a=false;
+	var id = $("#id").val();
+	var password = $("#password").val();
+	var name = $("#name").val().trim();
+	var address = $("#address").val().trim();
+	var phone = $("#phone").val();
+	var email = $("#email").val();
+	var facebook = $("#facebook").val().trim();
+
+	if (id.match(/^[a-zA-Z0-9]\w{6,15}$/)==null) {
+		$("#id").next('span').text('ID không hợp lệ');
 	} else {
 		$("#id").next('span').text('');
 	};
 
-	if ($("#password").val().trim()=="") {
-		$("#password").next('span').text('Mật Khẩu không được để trống');
-		a=false;
+	if (password.match(/^[a-zA-Z0-9]\w{6,15}$/)==null) {
+		$("#password").next('span').text('Mật Khẩu không hợp lệ');
 	} else {
 		$("#password").next('span').text('');
 	};
 
-	if ($("#name").val().trim()=="") {
+	if (name=="") {
 		$("#name").next('span').text('Họ Tên không được để trống');
-		a=false;
+	
 	} else {
 		$("#name").next('span').text('');
 	};
 
-	if ($("#address").val().trim()=="") {
+	if (address=="") {
 		$("#address").next('span').text('Địa Chỉ không được để trống');
-		a=false;
+		
 	} else {
 		$("#address").next('span').text('');
 	};
 
-	if ($("#phone").val().trim()=="") {
-		$("#phone").next('span').text('SĐT không được để trống');
-		a=false;
+	if (phone.match(/^[0-9]+$/)==null) {
+		$("#phone").next('span').text('SĐT không hợp lệ');
+	
 	} else {
 		$("#phone").next('span').text('');
 	};
 
-	if ($("#email").val().trim()=="" || $("#email").val().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/)==null) {
+	if (email.match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/)==null) {
 		$("#email").next('span').text('Email không hợp lệ');
-		a=false;
+	
 	} else {
 		$("#email").next('span').text('');
 	};
 
-	if ($("#facebook").val().trim()=="") {
-		$("#facebook").next('span').text('Facebook không được để trống');
-		a=false;
+	if (facebook.match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/)==null) {
+		$("#facebook").next('span').text('Facebook không hợp lệ');
+	
 	} else {
 		$("#facebook").next('span').text('');
 	};
 
 	if (parseInt($("#date").val().trim()) == 0 || parseInt($("#month").val().trim()) == 0 || parseInt($("#year").val().trim()) == 0) {
 		$("#year").next('span').text('Ngày Tháng Năm Sinh không được để trống');
-		a=false;
+	
 	} else {
 		$("#year").next('span').text('');
 	};
 
 	if ($("#gender").val().trim()== 0) {
 		$("#gender").next('span').text('Giới Tính không được để trống');
-		a=false;
+		
 	} else {
 		$("#gender").next('span').text('');
 	};
 
-	return a;
+	if (id.match(/^[a-zA-Z0-9]\w{6,15}$/)==null || 
+		password.match(/^[a-zA-Z0-9]\w{6,15}$/)==null ||
+		name == "" || 
+		address == "" ||
+		phone.match(/^[0-9]+$/)==null ||
+		email.match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/)==null ||
+		facebook.match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/)==null || 
+		parseInt($("#date").val().trim()) == 0 || parseInt($("#month").val().trim()) == 0 || parseInt($("#year").val().trim()) == 0 || 
+		$("#gender").val().trim()== 0) {
+		return false;
+	}else{
+		return true;
+	}
 
 })
