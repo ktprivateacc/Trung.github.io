@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+}
+table {
+	margin:auto;
+}
+
+table, td, th {
+	border: 1px solid black;
+}
+
+td, th {
+	padding: 10px;
+	text-align: center;
+}
+
+caption {
+	font-size: 30px;
+	font-weight: 900;
+}
+
+img {
+	width: 150px;
+	height: 150px;
+}
+
+.col1 {
+	width: 150px;
+}
+
+.col3 {
+	width: 250px;
+}
+
+.col4 {
+	width: 400px;
+}
+
+.col1, .col5 {
+	width: 100px;
+}
+
+tr:hover {
+	background-color: #26acbd4d;
+}
+
+
