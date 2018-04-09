@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>result</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<p>Đăng Kí Thành Công</p>
+	<p>Thông Tin Về Tài Khoản Của Bạn Như Sau</p>
+	<p id="main"></p>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		function decode() {
+			var uri = window.location.href;
+			var uri_dec = decodeURIComponent(uri);
+			$("#main").html(uri_dec);
+		}
+		decode();
+
+	</script>
+
+</body>
+</html>
