@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+#container-right {
+	width: 70%;
+	float: right;
+}
+
+#container-left {
+	width: 30%;
+	float: left;
+}
+
+.row {
+	margin-top: 20px;
+}
+
+
+.img-hover:hover {
+	transform: translate(0, -5px);
+	box-shadow: 0px 5px 10px black;
+}
+
+.clear {
+	clear: both;
+}
+
+footer {
+	text-align: center;
+	font-size: 50px;
+}
